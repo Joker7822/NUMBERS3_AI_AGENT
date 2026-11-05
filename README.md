@@ -48,7 +48,7 @@ Python 3.12以上。基本エンジンは標準ライブラリだけで動作し
 - docs/data/status.json：ダッシュボードの公開データ。
 - data/issued_forecasts.jsonl：明示的に事前発行した予測記録。独立したGitHubのサーバー時刻の確認機能は未実装のため、正式採点に流用しません。
 
-ダッシュボードは docs/index.html 。GitHub Pagesの設定が必要です。
+ダッシュボードは docs/index.html 。新規リポジトリでは **Settings → Pages → Build and deployment → Source を GitHub Actions に設定**する必要があります。設定前はデプロイを安全にスキップし、サイトが公開されたと誤認しません。設定後は次のコード更新・定期学習完了・手動ワークフロー実行のいずれかで公開されます。
 
 一次公表元：https://www.mizuhobank.co.jp/takarakuji/check/numbers/numbers3/index.html
 
