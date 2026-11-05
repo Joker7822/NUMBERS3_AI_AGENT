@@ -1,0 +1,27 @@
+{
+  "version": "numbers3-dashboard-v1",
+  "product": "Numbers3",
+  "generated_at_jst": null,
+  "latest_verified_draw": null,
+  "latest_secondary_draw": null,
+  "verified_draws": 0,
+  "secondary_research_draws": 0,
+  "issued_forecasts": 0,
+  "formally_graded_forecasts": 0,
+  "source_audit": {},
+  "research": {},
+  "academic_discovery": {},
+  "recent_week": {
+    "start_date": "2026-10-30",
+    "end_date": "2026-11-05",
+    "retrospective_rows": [],
+    "issued_rows": [],
+    "research_straight_hits": 0
+  },
+  "prediction_skill_confirmed": false,
+  "automatic_production_promotion": false,
+  "actual_purchase_profit_yen": null,
+  "warnings": [
+    "初回のオンライン結果取得・研究サイクルの実行前です。公開元照合済みデータは確認できません。"
+  ]
+}
