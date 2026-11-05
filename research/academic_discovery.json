@@ -1,0 +1,73 @@
+{
+  "version": "numbers3-academic-discovery-v1",
+  "generated_at_jst": "2026-11-05T10:21:13+09:00",
+  "queries": 2,
+  "sources_found": 10,
+  "items": [
+    {
+      "doi": "10.5040/9781718219342.ch-014",
+      "title": "Scoring Systems",
+      "url": "https://doi.org/10.5040/9781718219342.ch-014",
+      "hypothesis_only": true
+    },
+    {
+      "doi": "10.1353/mni.2081.0010",
+      "title": "Outcasts of Empire: Japan’s Rule on Taiwan’s “Savage Border,” 1874–1945 by Paul D. Barclay",
+      "url": "https://doi.org/10.1353/mni.2081.0010",
+      "hypothesis_only": true
+    },
+    {
+      "doi": "10.1515/9780748672776-075",
+      "title": "INDEX OF PROPER NAMES",
+      "url": "https://doi.org/10.1515/9780748672776-075",
+      "hypothesis_only": true
+    },
+    {
+      "doi": "10.3917/e.gmp.pr1.0022",
+      "title": "CSR communication and financial performance : the moderating role of public authorities and the rule of law",
+      "url": "https://doi.org/10.3917/e.gmp.pr1.0022",
+      "hypothesis_only": true
+    },
+    {
+      "doi": "10.5705/ss.202025.0042",
+      "title": "Sequential Multiple Testing of Multiple Composite Hypotheses: an Asymptotic Optimality Theory with General Information Functions",
+      "url": "https://doi.org/10.5705/ss.202025.0042",
+      "hypothesis_only": true
+    },
+    {
+      "doi": "10.15556/ijsim.04.03.001",
+      "title": "The Development of Loyalty with Online Services Customers",
+      "url": "https://doi.org/10.15556/ijsim.04.03.001",
+      "hypothesis_only": true
+    },
+    {
+      "doi": "10.15556/ijsim.02.03.001",
+      "title": "Understanding Online News: Uses and Gratifications of Mainstream News Sites and Social Media",
+      "url": "https://doi.org/10.15556/ijsim.02.03.001",
+      "hypothesis_only": true
+    },
+    {
+      "doi": "10.15556/ijiim.02.01.003",
+      "title": "Learner profiles and the process of Learning in the Higher Educational Context",
+      "url": "https://doi.org/10.15556/ijiim.02.01.003",
+      "hypothesis_only": true
+    },
+    {
+      "doi": "10.15556/ijiim.01.02.002",
+      "title": "WEB-BASED COLLABORATIVE LEARNING AND KNOWLEDGE SHARING IN INFORMAL BUSINESS NETWORKS",
+      "url": "https://doi.org/10.15556/ijiim.01.02.002",
+      "hypothesis_only": true
+    },
+    {
+      "doi": "10.18535/ijetst/v3i08.10",
+      "title": "Contour Based Real Time Multiple Object Tracking",
+      "url": "https://doi.org/10.18535/ijetst/v3i08.10",
+      "hypothesis_only": true
+    }
+  ],
+  "errors": [],
+  "external_code_executed": false,
+  "search_results_changed_model_weights": false,
+  "prediction_skill_confirmed": false,
+  "status": "search_completed"
+}
