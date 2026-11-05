@@ -11,6 +11,7 @@ def snapshot(root: Path, *, now: datetime | None = None) -> dict:
     secondary = load_records(root, "secondary")
     source = read_json(root / "research/last_source_audit.json")
     research = read_json(root / "research/replay.json")
+    academic = read_json(root / "research/academic_discovery.json")
     issued = read_issued(root)
     end = now.date()
     start = end - timedelta(days=6)
@@ -47,6 +48,7 @@ def snapshot(root: Path, *, now: datetime | None = None) -> dict:
         "formally_graded_forecasts": 0,
         "source_audit": source,
         "research": research,
+        "academic_discovery": academic,
         "recent_week": {
             "start_date": start.isoformat(), "end_date": end.isoformat(),
             "retrospective_rows": recent, "issued_rows": pending,
