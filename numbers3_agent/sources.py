@@ -102,7 +102,7 @@ def parse_rakuten(html: str) -> list[dict]:
     records = [{"round": int(m[1]), "draw_date": m[2],
                 "winning_number": m[3]} for m in pat.finditer(stream)]
     labeled_rounds = [int(n) for n in re.findall(
-        r"回号\\s*第\\s*(\\d{1,6})\\s*回", stream)]
+        r"回号\s*第\s*(\d{1,6})\s*回", stream)]
     if (not records or len(records) != len(labeled_rounds) or
             len(set(labeled_rounds)) != len(labeled_rounds)):
         raise SourceError("Rakuten page contains missing, duplicated or malformed draw rows")
@@ -129,7 +129,7 @@ def parse_bank(html: str) -> list[dict]:
                 rows.append({"round": int(m[1]), "draw_date": cells[1],
                              "winning_number": cells[2]})
     labeled_rounds = [int(n) for n in re.findall(
-        r"回別\\s*第\\s*(\\d{1,6})\\s*回", stream)]
+        r"回別\s*第\s*(\d{1,6})\s*回", stream)]
     # The main page must not quietly drop malformed 4-digit entries or
     # missing draw labels. Legacy table rows have separate explicit handling.
     main_count = len(list(pat.finditer(stream)))
