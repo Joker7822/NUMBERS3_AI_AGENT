@@ -10,6 +10,7 @@ from .learning import run_replay
 from .dashboard import write_dashboard, snapshot
 from .issuance import issue
 from .research import save as run_academic_search
+from .history import extend as extend_history
 
 def parser() -> ArgumentParser:
     ap = ArgumentParser(prog="numbers3-agent")
@@ -47,6 +48,7 @@ def main(args: list[str] | None = None) -> int:
         elif parsed.command == "cycle":
             evidence = refresh(root, months_back=parsed.months_back,
                                browser_fallback=parsed.bank_browser_fallback)
+            extension = extend_history(root)
             model = run_replay(root)
             academic = run_academic_search(root)
             public = write_dashboard(root)
@@ -55,6 +57,12 @@ def main(args: list[str] | None = None) -> int:
                 "learning": {k: model.get(k) for k in
                              ("status","evaluated_draws","research_straight_hits",
                               "reference_straight_hits","next_research_candidate")},
+                "historical_extension": {
+                    "status": extension["status"],
+                    "total_research_rows": extension.get("total_research_rows"),
+                    "overlap_count": extension["overlap_count"],
+                    "official_bank_verified": False
+                },
                 "academic_search": {
                     "status": academic["status"],
                     "sources_found": academic["sources_found"],
