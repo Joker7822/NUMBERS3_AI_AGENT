@@ -11,6 +11,7 @@ import random
 
 from .rules import three_digits, OUTCOMES
 from .sources import JST, SourceError, atomic_json, load_records
+from .history import load_extended
 
 MODELS = (("positional_30_alpha5", 30, 5),
           ("positional_100_alpha10", 100, 10),
@@ -50,7 +51,8 @@ def _choose(scores: dict[str, deque], trained: int) -> str:
                 if len(trace) >= 60 and sum(trace) / len(trace) > 0.02]
     return max(eligible)[1] if eligible else "uniform"
 
-def replay(rows: list[dict]) -> tuple[dict, list[dict]]:
+def replay(rows: list[dict], *,
+           source_status: str = "single_rakuten_publisher_not_officially_verified") -> tuple[dict, list[dict]]:
     """Every forecast is computed before consuming its actual winning number."""
     if not rows:
         return ({
@@ -88,7 +90,7 @@ def replay(rows: list[dict]) -> tuple[dict, list[dict]]:
                 "research_number": choice, "research_model": model,
                 "research_hit": int(choice == number),
                 "uniform_number": baseline, "uniform_hit": int(baseline == number),
-                "source_status": "single_rakuten_publisher_not_officially_verified"
+                "source_status": source_status
             })
             # Only after the row is scored may its result affect future choices.
             for name, prob in current_probs.items():
@@ -103,7 +105,7 @@ def replay(rows: list[dict]) -> tuple[dict, list[dict]]:
     summary = {
         "product": "Numbers3",
         "status": "historical_walk_forward_reconstruction_only",
-        "data_scope": "single_rakuten_publisher_not_officially_verified",
+        "data_scope": source_status,
         "first_recorded_round": rows[0]["round"],
         "last_recorded_round": rows[-1]["round"],
         "evaluated_draws": len(grades),
@@ -127,8 +129,11 @@ def replay(rows: list[dict]) -> tuple[dict, list[dict]]:
 
 def run_replay(root: Path, *, now: datetime | None = None) -> dict:
     stamp = (now or datetime.now(JST)).astimezone(JST)
-    rows = load_records(root, "secondary")
-    summary, grades = replay(rows)
+    extended = load_extended(root)
+    rows = extended or load_records(root, "secondary")
+    scope = ("two_secondary_publishers_overlap_checked_not_bank_verified"
+             if extended else "single_rakuten_publisher_not_officially_verified")
+    summary, grades = replay(rows, source_status=scope)
     summary["generated_at_jst"] = stamp.isoformat(timespec="seconds")
     target = root / "research/round_predictions.csv"
     target.parent.mkdir(parents=True, exist_ok=True)
