@@ -1,18 +1,18 @@
 {
   "product": "Numbers3",
   "status": "historical_walk_forward_reconstruction_only",
-  "data_scope": "single_rakuten_publisher_not_officially_verified",
-  "first_recorded_round": 6868,
+  "data_scope": "two_secondary_publishers_overlap_checked_not_bank_verified",
+  "first_recorded_round": 1,
   "last_recorded_round": 7107,
-  "evaluated_draws": 239,
-  "research_straight_hits": 0,
-  "reference_straight_hits": 0,
-  "theoretical_uniform_expected_straight_hits": 0.239,
+  "evaluated_draws": 7106,
+  "research_straight_hits": 6,
+  "reference_straight_hits": 6,
+  "theoretical_uniform_expected_straight_hits": 7.106,
   "research_model_counts": {
-    "uniform": 239,
-    "positional_30_alpha5": 0,
-    "positional_100_alpha10": 0,
-    "positional_250_alpha20": 0
+    "uniform": 6753,
+    "positional_30_alpha5": 125,
+    "positional_100_alpha10": 24,
+    "positional_250_alpha20": 204
   },
   "next_research_candidate": {
     "round": 7108,
@@ -35,7 +35,7 @@
       "research_hit": 0,
       "uniform_number": "369",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7106,
@@ -47,7 +47,7 @@
       "research_hit": 0,
       "uniform_number": "390",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7105,
@@ -59,7 +59,7 @@
       "research_hit": 0,
       "uniform_number": "197",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7104,
@@ -71,7 +71,7 @@
       "research_hit": 0,
       "uniform_number": "862",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7103,
@@ -83,7 +83,7 @@
       "research_hit": 0,
       "uniform_number": "245",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7102,
@@ -95,7 +95,7 @@
       "research_hit": 0,
       "uniform_number": "522",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7101,
@@ -107,7 +107,7 @@
       "research_hit": 0,
       "uniform_number": "237",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7100,
@@ -119,7 +119,7 @@
       "research_hit": 0,
       "uniform_number": "285",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7099,
@@ -131,7 +131,7 @@
       "research_hit": 0,
       "uniform_number": "554",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7098,
@@ -143,7 +143,7 @@
       "research_hit": 0,
       "uniform_number": "759",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7097,
@@ -155,7 +155,7 @@
       "research_hit": 0,
       "uniform_number": "948",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7096,
@@ -167,7 +167,7 @@
       "research_hit": 0,
       "uniform_number": "269",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7095,
@@ -179,7 +179,7 @@
       "research_hit": 0,
       "uniform_number": "788",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7094,
@@ -191,7 +191,7 @@
       "research_hit": 0,
       "uniform_number": "894",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7093,
@@ -203,7 +203,7 @@
       "research_hit": 0,
       "uniform_number": "083",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7092,
@@ -215,7 +215,7 @@
       "research_hit": 0,
       "uniform_number": "682",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7091,
@@ -227,7 +227,7 @@
       "research_hit": 0,
       "uniform_number": "196",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7090,
@@ -239,7 +239,7 @@
       "research_hit": 0,
       "uniform_number": "460",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7089,
@@ -251,7 +251,7 @@
       "research_hit": 0,
       "uniform_number": "579",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7088,
@@ -263,7 +263,7 @@
       "research_hit": 0,
       "uniform_number": "365",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7087,
@@ -275,7 +275,7 @@
       "research_hit": 0,
       "uniform_number": "957",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7086,
@@ -287,7 +287,7 @@
       "research_hit": 0,
       "uniform_number": "156",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7085,
@@ -299,7 +299,7 @@
       "research_hit": 0,
       "uniform_number": "240",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7084,
@@ -311,7 +311,7 @@
       "research_hit": 0,
       "uniform_number": "234",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     },
     {
       "round": 7083,
@@ -323,13 +323,13 @@
       "research_hit": 0,
       "uniform_number": "611",
       "uniform_hit": 0,
-      "source_status": "single_rakuten_publisher_not_officially_verified"
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     }
   ],
   "officially_verified": false,
   "prediction_skill_confirmed": false,
   "production_model_changed": false,
   "interpretation": "Retrospective selection repeatedly uses historical cohorts; no independent prospective evidence.",
-  "generated_at_jst": "2026-11-05T10:21:13+09:00",
-  "replay_sha256": "b79b26eec7d21c3fd8d3b249b4a74e8639e230a87bc5f80a7859362e474ba977"
+  "generated_at_jst": "2026-11-05T10:29:47+09:00",
+  "replay_sha256": "f69a575b271517b35aa6e5d9639997ffce2b0b731e32762d5536bb16f15eee2a"
 }

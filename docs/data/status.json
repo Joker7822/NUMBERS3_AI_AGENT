@@ -1,7 +1,7 @@
 {
   "version": "numbers3-dashboard-v1",
   "product": "Numbers3",
-  "generated_at_jst": "2026-11-05T10:21:14+09:00",
+  "generated_at_jst": "2026-11-05T10:30:04+09:00",
   "latest_verified_draw": null,
   "latest_secondary_draw": {
     "round": 7107,
@@ -9,15 +9,31 @@
     "winning_number": "533"
   },
   "verified_draws": 0,
-  "secondary_research_draws": 240,
+  "secondary_research_draws": 7107,
+  "research_historical_extension": {
+    "product": "Numbers3",
+    "status": "extended_secondary_history_not_officially_verified",
+    "checked_at_jst": "2026-11-05T10:29:47+09:00",
+    "archive_url": "https://hazimekom.github.io/numbers4-api/api/v2/games/numbers3/draws.min.json",
+    "previous_research_rows": 0,
+    "rakuten_rows": 240,
+    "overlap_count": 240,
+    "official_bank_verified": false,
+    "prediction_skill_confirmed": false,
+    "production_promotion_allowed": false,
+    "new_research_rows": 7107,
+    "github_archive_rows": 7107,
+    "total_research_rows": 7107,
+    "github_archive_response_sha256": "2469c16b60b13a8a64401b422af06c1f82672cb61e2e6fb1ec070c38a0883859"
+  },
   "issued_forecasts": 0,
   "formally_graded_forecasts": 0,
   "source_audit": {
     "product": "Numbers3",
-    "checked_at_jst": "2026-11-05T10:19:05+09:00",
+    "checked_at_jst": "2026-11-05T10:29:13+09:00",
     "status": "secondary_only_not_officially_verified",
     "bank_rows": 0,
-    "rakuten_rows": 240,
+    "rakuten_rows": 47,
     "matched_rows_seen": 0,
     "new_verified_rows": 0,
     "secondary_rows_available": 240,
@@ -37,51 +53,6 @@
         "publisher": "bank",
         "month": "2026-09",
         "reason": "not a Numbers3 Mizuho result page"
-      },
-      {
-        "publisher": "bank",
-        "month": "2026-08",
-        "reason": "not a Numbers3 Mizuho result page"
-      },
-      {
-        "publisher": "bank",
-        "month": "2026-07",
-        "reason": "not a Numbers3 Mizuho result page"
-      },
-      {
-        "publisher": "bank",
-        "month": "2026-06",
-        "reason": "not a Numbers3 Mizuho result page"
-      },
-      {
-        "publisher": "bank",
-        "month": "2026-05",
-        "reason": "not a Numbers3 Mizuho result page"
-      },
-      {
-        "publisher": "bank",
-        "month": "2026-04",
-        "reason": "not a Numbers3 Mizuho result page"
-      },
-      {
-        "publisher": "bank",
-        "month": "2026-03",
-        "reason": "not a Numbers3 Mizuho result page"
-      },
-      {
-        "publisher": "bank",
-        "month": "2026-02",
-        "reason": "not a Numbers3 Mizuho result page"
-      },
-      {
-        "publisher": "bank",
-        "month": "2026-01",
-        "reason": "not a Numbers3 Mizuho result page"
-      },
-      {
-        "publisher": "bank",
-        "month": "2025-12",
-        "reason": "not a Numbers3 Mizuho result page"
       }
     ],
     "production_model_promoted": false,
@@ -90,18 +61,18 @@
   "research": {
     "product": "Numbers3",
     "status": "historical_walk_forward_reconstruction_only",
-    "data_scope": "single_rakuten_publisher_not_officially_verified",
-    "first_recorded_round": 6868,
+    "data_scope": "two_secondary_publishers_overlap_checked_not_bank_verified",
+    "first_recorded_round": 1,
     "last_recorded_round": 7107,
-    "evaluated_draws": 239,
-    "research_straight_hits": 0,
-    "reference_straight_hits": 0,
-    "theoretical_uniform_expected_straight_hits": 0.239,
+    "evaluated_draws": 7106,
+    "research_straight_hits": 6,
+    "reference_straight_hits": 6,
+    "theoretical_uniform_expected_straight_hits": 7.106,
     "research_model_counts": {
-      "uniform": 239,
-      "positional_30_alpha5": 0,
-      "positional_100_alpha10": 0,
-      "positional_250_alpha20": 0
+      "uniform": 6753,
+      "positional_30_alpha5": 125,
+      "positional_100_alpha10": 24,
+      "positional_250_alpha20": 204
     },
     "next_research_candidate": {
       "round": 7108,
@@ -124,7 +95,7 @@
         "research_hit": 0,
         "uniform_number": "369",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7106,
@@ -136,7 +107,7 @@
         "research_hit": 0,
         "uniform_number": "390",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7105,
@@ -148,7 +119,7 @@
         "research_hit": 0,
         "uniform_number": "197",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7104,
@@ -160,7 +131,7 @@
         "research_hit": 0,
         "uniform_number": "862",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7103,
@@ -172,7 +143,7 @@
         "research_hit": 0,
         "uniform_number": "245",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7102,
@@ -184,7 +155,7 @@
         "research_hit": 0,
         "uniform_number": "522",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7101,
@@ -196,7 +167,7 @@
         "research_hit": 0,
         "uniform_number": "237",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7100,
@@ -208,7 +179,7 @@
         "research_hit": 0,
         "uniform_number": "285",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7099,
@@ -220,7 +191,7 @@
         "research_hit": 0,
         "uniform_number": "554",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7098,
@@ -232,7 +203,7 @@
         "research_hit": 0,
         "uniform_number": "759",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7097,
@@ -244,7 +215,7 @@
         "research_hit": 0,
         "uniform_number": "948",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7096,
@@ -256,7 +227,7 @@
         "research_hit": 0,
         "uniform_number": "269",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7095,
@@ -268,7 +239,7 @@
         "research_hit": 0,
         "uniform_number": "788",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7094,
@@ -280,7 +251,7 @@
         "research_hit": 0,
         "uniform_number": "894",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7093,
@@ -292,7 +263,7 @@
         "research_hit": 0,
         "uniform_number": "083",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7092,
@@ -304,7 +275,7 @@
         "research_hit": 0,
         "uniform_number": "682",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7091,
@@ -316,7 +287,7 @@
         "research_hit": 0,
         "uniform_number": "196",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7090,
@@ -328,7 +299,7 @@
         "research_hit": 0,
         "uniform_number": "460",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7089,
@@ -340,7 +311,7 @@
         "research_hit": 0,
         "uniform_number": "579",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7088,
@@ -352,7 +323,7 @@
         "research_hit": 0,
         "uniform_number": "365",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7087,
@@ -364,7 +335,7 @@
         "research_hit": 0,
         "uniform_number": "957",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7086,
@@ -376,7 +347,7 @@
         "research_hit": 0,
         "uniform_number": "156",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7085,
@@ -388,7 +359,7 @@
         "research_hit": 0,
         "uniform_number": "240",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7084,
@@ -400,7 +371,7 @@
         "research_hit": 0,
         "uniform_number": "234",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7083,
@@ -412,19 +383,19 @@
         "research_hit": 0,
         "uniform_number": "611",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       }
     ],
     "officially_verified": false,
     "prediction_skill_confirmed": false,
     "production_model_changed": false,
     "interpretation": "Retrospective selection repeatedly uses historical cohorts; no independent prospective evidence.",
-    "generated_at_jst": "2026-11-05T10:21:13+09:00",
-    "replay_sha256": "b79b26eec7d21c3fd8d3b249b4a74e8639e230a87bc5f80a7859362e474ba977"
+    "generated_at_jst": "2026-11-05T10:29:47+09:00",
+    "replay_sha256": "f69a575b271517b35aa6e5d9639997ffce2b0b731e32762d5536bb16f15eee2a"
   },
   "academic_discovery": {
     "version": "numbers3-academic-discovery-v1",
-    "generated_at_jst": "2026-11-05T10:21:13+09:00",
+    "generated_at_jst": "2026-11-05T10:30:01+09:00",
     "queries": 2,
     "sources_found": 10,
     "items": [
@@ -509,7 +480,7 @@
         "research_hit": 0,
         "uniform_number": "369",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7106,
@@ -521,7 +492,7 @@
         "research_hit": 0,
         "uniform_number": "390",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7105,
@@ -533,7 +504,7 @@
         "research_hit": 0,
         "uniform_number": "197",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       },
       {
         "round": 7104,
@@ -545,7 +516,7 @@
         "research_hit": 0,
         "uniform_number": "862",
         "uniform_hit": 0,
-        "source_status": "single_rakuten_publisher_not_officially_verified"
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       }
     ],
     "issued_rows": [],
@@ -557,6 +528,7 @@
   "warnings": [
     "みずほ銀行と楽天の照合済み結果がありません。正式な的中判定や本番AI昇格は停止しています。",
     "楽天のみの参考結果は銀行未照合です。研究目的以外で採点しません。",
-    "公式取得に未解決エラーがあります。ソース監査ログを確認してください。"
+    "公式取得に未解決エラーがあります。ソース監査ログを確認してください。",
+    "第1回からの全回履歴は二次公開資料の一致区間を検査した研究データです。銀行の全件公式照合ではありません。"
   ]
 }
