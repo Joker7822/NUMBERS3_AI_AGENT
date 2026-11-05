@@ -4,11 +4,14 @@ from pathlib import Path
 
 from .sources import JST, atomic_json, read_json, load_records
 from .issuance import read_issued
+from .history import load_extended
 
 def snapshot(root: Path, *, now: datetime | None = None) -> dict:
     now = (now or datetime.now(JST)).astimezone(JST)
     verified = load_records(root, "verified")
     secondary = load_records(root, "secondary")
+    full_research = load_extended(root)
+    extension = read_json(root / "research/historical_extension_audit.json")
     source = read_json(root / "research/last_source_audit.json")
     research = read_json(root / "research/replay.json")
     academic = read_json(root / "research/academic_discovery.json")
@@ -37,13 +40,16 @@ def snapshot(root: Path, *, now: datetime | None = None) -> dict:
         warnings.append("公式取得に未解決エラーがあります。ソース監査ログを確認してください。")
     if not secondary:
         warnings.append("オンライン学習用のNumbers3履歴はまだ取得されていません。")
+    if full_research:
+        warnings.append("第1回からの全回履歴は二次公開資料の一致区間を検査した研究データです。銀行の全件公式照合ではありません。")
     return {
         "version": "numbers3-dashboard-v1",
         "product": "Numbers3", "generated_at_jst": now.isoformat(timespec="seconds"),
         "latest_verified_draw": latest_verified,
         "latest_secondary_draw": latest_secondary,
         "verified_draws": len(verified),
-        "secondary_research_draws": len(secondary),
+        "secondary_research_draws": len(full_research or secondary),
+        "research_historical_extension": extension,
         "issued_forecasts": len(issued),
         "formally_graded_forecasts": 0,
         "source_audit": source,
