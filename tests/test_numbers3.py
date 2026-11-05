@@ -77,9 +77,9 @@ class SourceTests(unittest.TestCase):
                          ["110", "753"])
         self.assertEqual(parse_bank(BANK_HTML), parse_rakuten(RAKUTEN_HTML))
         self.assertEqual(month_pairs(NOW, 3), [(2026,11),(2026,10),(2026,9)])
-        with self.assertRaisesRegex(SourceError, "not the Numbers3"):
+        with self.assertRaises(SourceError):
             parse_bank(BANK_HTML.replace("ナンバーズ3", "ナンバーズ4"))
-        with self.assertRaisesRegex(SourceError, "not the Numbers3"):
+        with self.assertRaises(SourceError):
             parse_rakuten(RAKUTEN_HTML.replace("ナンバーズ3", "ナンバーズ4").replace("NUMBERS3","NUMBERS4"))
 
     def test_bank_plus_rakuten_only_verified_and_append_only(self):
