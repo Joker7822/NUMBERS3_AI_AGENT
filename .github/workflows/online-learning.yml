@@ -61,6 +61,8 @@ jobs:
           print('Dual-publisher matched:',src['matched_rows_seen'])
           print('Total bank-verified:',src['verified_rows_available'])
           print('Retrospective research only:',r['learning']['evaluated_draws'])
+          print('Extended secondary history:',r['historical_extension']['total_research_rows'])
+          print('Publisher-overlap crosschecks:',r['historical_extension']['overlap_count'])
           if not src['matched_rows_seen']:
               print('WARNING: no independently matched bank results. Production grading blocked.')
           for error in src['errors'][:12]:
@@ -69,12 +71,13 @@ jobs:
             # Never modify an explicitly issued forecast or executable model.
             git diff --exit-code -- data/issued_forecasts.jsonl numbers3_agent/
             for file in data/secondary_history.json data/verified_draws.json \
-              research/last_source_audit.json research/replay.json \
-              research/round_predictions.csv research/academic_discovery.json \
-              docs/data/status.json; do
+              data/secondary_extended.json \
+              research/last_source_audit.json research/historical_extension_audit.json \
+              research/replay.json research/round_predictions.csv \
+              research/academic_discovery.json docs/data/status.json; do
               if [ -f "$file" ]; then git add -- "$file"; fi
             done
-            unexpected="$(git diff --cached --name-only | grep -Ev '^(data/(secondary_history|verified_draws).json|research/(last_source_audit|replay|academic_discovery).json|research/round_predictions.csv|docs/data/status.json)$' || true)"
+            unexpected="$(git diff --cached --name-only | grep -Ev '^(data/(secondary_history|verified_draws|secondary_extended).json|research/(last_source_audit|historical_extension_audit|replay|academic_discovery).json|research/round_predictions.csv|docs/data/status.json)$' || true)"
             if [ -n "$unexpected" ]; then echo "::error::Unapproved evidence write: $unexpected"; exit 1; fi
             if git diff --cached --quiet; then echo 'No new research data to publish'; exit 0; fi
             git commit -m 'research: refresh Numbers3 publisher evidence and strictly retrospective replay'

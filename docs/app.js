@@ -38,7 +38,8 @@ function validate(data){
       week.retrospective_rows.length>7||!integer(week.research_straight_hits)||
       week.research_straight_hits!==week.retrospective_rows.filter(x=>x.research_hit===1).length||
       week.retrospective_rows.some(r=>!digits(r.research_number)||!digits(r.actual)||
-        r.source_status!=="single_rakuten_publisher_not_officially_verified"||
+        !["single_rakuten_publisher_not_officially_verified",
+          "two_secondary_publishers_overlap_checked_not_bank_verified"].includes(r.source_status)||
         r.research_hit!==Number(r.research_number===r.actual)||
         !(r.draw_date>=week.start_date&&r.draw_date<=week.end_date))||
       week.issued_rows.some(r=>r.status!=="unwitnessed_not_formally_graded"||
