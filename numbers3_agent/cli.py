@@ -9,6 +9,7 @@ from .sources import refresh
 from .learning import run_replay
 from .dashboard import write_dashboard, snapshot
 from .issuance import issue
+from .research import save as run_academic_search
 
 def parser() -> ArgumentParser:
     ap = ArgumentParser(prog="numbers3-agent")
@@ -47,12 +48,18 @@ def main(args: list[str] | None = None) -> int:
             evidence = refresh(root, months_back=parsed.months_back,
                                browser_fallback=parsed.bank_browser_fallback)
             model = run_replay(root)
+            academic = run_academic_search(root)
             public = write_dashboard(root)
             report = {
                 "product": "Numbers3", "source": evidence,
                 "learning": {k: model.get(k) for k in
                              ("status","evaluated_draws","research_straight_hits",
                               "reference_straight_hits","next_research_candidate")},
+                "academic_search": {
+                    "status": academic["status"],
+                    "sources_found": academic["sources_found"],
+                    "external_code_executed": False
+                },
                 "dashboard_generated_at_jst": public["generated_at_jst"]
             }
         elif parsed.command == "issue":
