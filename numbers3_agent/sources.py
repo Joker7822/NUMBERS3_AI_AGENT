@@ -101,8 +101,11 @@ def parse_rakuten(html: str) -> list[dict]:
     )
     records = [{"round": int(m[1]), "draw_date": m[2],
                 "winning_number": m[3]} for m in pat.finditer(stream)]
-    if not records:
-        raise SourceError("Rakuten page has no labeled draw results")
+    labeled_rounds = [int(n) for n in re.findall(
+        r"回号\\s*第\\s*(\\d{1,6})\\s*回", stream)]
+    if (not records or len(records) != len(labeled_rounds) or
+            len(set(labeled_rounds)) != len(labeled_rounds)):
+        raise SourceError("Rakuten page contains missing, duplicated or malformed draw rows")
     return valid_rows(records, source="rakuten")
 
 def parse_bank(html: str) -> list[dict]:
@@ -125,6 +128,14 @@ def parse_bank(html: str) -> list[dict]:
             if m and re.fullmatch(r"[0-9]{3}", cells[2]) and re.fullmatch(r"[0-9]{4}", cells[3]):
                 rows.append({"round": int(m[1]), "draw_date": cells[1],
                              "winning_number": cells[2]})
+    labeled_rounds = [int(n) for n in re.findall(
+        r"回別\\s*第\\s*(\\d{1,6})\\s*回", stream)]
+    # The main page must not quietly drop malformed 4-digit entries or
+    # missing draw labels. Legacy table rows have separate explicit handling.
+    main_count = len(list(pat.finditer(stream)))
+    if labeled_rounds and (main_count != len(labeled_rounds) or
+                           len(labeled_rounds) != len(set(labeled_rounds))):
+        raise SourceError("Mizuho result page has missing or malformed labeled draw rows")
     if not rows:
         raise SourceError("Mizuho official rows not present; possibly JavaScript-only")
     return valid_rows(rows, source="bank")
