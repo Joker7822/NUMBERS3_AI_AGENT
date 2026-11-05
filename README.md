@@ -42,6 +42,8 @@ Python 3.12以上。基本エンジンは標準ライブラリだけで動作し
 
 - data/verified_draws.json：銀行＋楽天の回号・日付・数字が一致した結果のみ。
 - data/secondary_history.json：楽天のみの参考履歴。銀行公式未照合。
+- data/secondary_extended.json：Numbers3専用V2の全履歴を楽天との重複区間で照合した研究用データ。これは銀行公式照合ではありません。
+- research/historical_extension_audit.json：全履歴取り込み時の楽天重複回数、入力のSHA-256、失敗状態。
 - research/replay.json：前の回までの情報だけで再予測する研究レポート。
 - research/round_predictions.csv：研究用逐次予測・実結果の回別記録。
 - research/academic_discovery.json：安全に取得した学術論文のDOI・題名。
@@ -53,5 +55,7 @@ Python 3.12以上。基本エンジンは標準ライブラリだけで動作し
 一次公表元：https://www.mizuhobank.co.jp/takarakuji/check/numbers/numbers3/index.html
 
 二次公表元：https://takarakuji.rakuten.co.jp/backnumber/numbers3_past/
+
+Numbers3全履歴の第三者APIは https://hazimekom.github.io/numbers4-api/api/v2/games/numbers3/draws.min.json です。リポジトリ名に Numbers4 が含まれていますが、利用するエンドポイントは **Numbers3専用V2** です。楽天との重複期間の回号・日付・結果が一致した場合に限り、第1回からの研究用再予測に使います。2つの二次公開元が同じ一次情報を利用している可能性を排除できないため、正式な独立照合には昇格しません。
 
 **Numbers4の結果、4桁番号、過去の的中実績は一切流用していません。** 過去データに対する研究比較は将来の有意な予測力を証明しません。購入、収益、モデル自動昇格の主張は行いません。
