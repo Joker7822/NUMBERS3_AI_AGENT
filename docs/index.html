@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="NUMBERS3 AI AGENT — ナンバーズ3の研究用予測・照合・出典監査">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <title>NUMBERS3 AI AGENT | RESEARCH & EVIDENCE</title>
+  <link rel="stylesheet" href="style.css?v=20261105-initial">
+  <script type="module" src="app.js?v=20261105-initial"></script>
+</head>
+<body>
+<div class="site">
+  <header class="nav">
+    <a class="wordmark" href="#home" aria-label="Numbers3 dashboard home">
+      <span class="monogram">N<span>3</span></span>
+      <span>NUMBERS3 <b>AI AGENT</b><small>RESEARCH / VERIFICATION / TRANSPARENCY</small></span>
+    </a>
+    <button type="button" class="refresh" id="refresh">↻ データ更新</button>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div class="eyebrow"><span class="beacon"></span> 3-DIGIT DRAW INTELLIGENCE <span class="sep">/</span> JAPAN STANDARD TIME</div>
+      <h1>予測をする。<br><em>根拠を分けて、検証する。</em></h1>
+      <p class="hero-copy">ナンバーズ3専用の自動研究システム。ストレート・ボックス・セット・ミニのルールに対応。公開元の結果照合と、過去データからの研究用再予測を区別して表示します。</p>
+      <div class="hero-meta"><span class="state-pill" id="source-badge">取得データを確認中</span><span id="generated-time">—</span></div>
+      <div class="hero-tape" aria-label="Numbers3 three position illustration">
+        <span>0—9</span><i></i><span>0—9</span><i></i><span>0—9</span>
+        <strong>1 / 1,000</strong>
+      </div>
+    </section>
+    <div role="alert" id="error" class="error" hidden></div>
+    <section class="metrics" aria-label="データ検証状況">
+      <article class="metric"><span class="metric-label">BANK + SECONDARY MATCH</span><strong id="verified-count">—</strong><span>みずほ銀行と楽天で一致した抽せん</span></article>
+      <article class="metric"><span class="metric-label">RESEARCH ONLY</span><strong id="secondary-count">—</strong><span>二次公開元のみの参考履歴</span></article>
+      <article class="metric"><span class="metric-label">PAST-ONLY REPLAY</span><strong id="evaluated-count">—</strong><span>過去だけを使用した研究再予測</span></article>
+      <article class="metric"><span class="metric-label">OFFICIALLY GRADED</span><strong id="graded-count">0</strong><span>抽せん前の独立公開証拠を要求</span></article>
+    </section>
+    <div class="columns">
+      <section class="panel accent-panel" id="next-research">
+        <div class="panel-heading"><span class="kicker">NEXT / EXPLORATORY MODEL</span><h2>次回の研究用予測</h2></div>
+        <p class="subtle">過去に得られたNumbers3結果だけで算出。抽せん前の正式発行・購入・的中保証ではありません。</p>
+        <div class="candidate" id="candidate-number" aria-live="polite">— — —</div>
+        <div class="details"><span>対象回</span><strong id="candidate-round">—</strong></div>
+        <div class="details"><span>研究モデル</span><strong id="candidate-model">—</strong></div>
+        <div class="details"><span>学習に使用した最終回</span><strong id="candidate-cutoff">—</strong></div>
+        <div class="footnote" id="candidate-note">履歴の取得待ちです。</div>
+      </section>
+      <section class="panel" id="latest-results">
+        <div class="panel-heading"><span class="kicker">LATEST / DRAW EVIDENCE</span><h2>最新の当せん数字</h2></div>
+        <div class="comparison">
+          <div class="result-box"><span>銀行＋楽天 照合済み</span><strong id="verified-number">— — —</strong><small id="verified-meta">照合待ち</small></div>
+          <div class="result-box secondary"><span>楽天の参考履歴</span><strong id="secondary-number">— — —</strong><small id="secondary-meta">取得待ち</small></div>
+        </div>
+        <div class="footnote">照合が確認できない回は「正式確認済み」と表示しません。銀行結果の公開ページがJavaScriptのみの場合、取得に失敗することがあります。</div>
+      </section>
+    </div>
+    <section class="panel" id="weekly-results">
+      <div class="panel-heading"><span class="kicker">LAST 7 DAYS / REPLAY AUDIT</span><h2>直近1週間の予測・照合</h2></div>
+      <p class="subtle" id="week-range">日本時間の期間を読み込み中です。</p>
+      <div class="table-wrap">
+        <table aria-label="Numbers3 直近7日間の研究再予測と参考結果">
+          <thead><tr><th>回号 / 日付</th><th>研究予測</th><th>参考当せん数字</th><th>ストレート照合</th></tr></thead>
+          <tbody id="week-rows"><tr><td colspan="4">検証データを取得中</td></tr></tbody>
+        </table>
+      </div>
+      <p class="subtle">※この表は抽せん後にも再計算される研究用の過去再現です。事前に公開された予測の的中実績ではなく、楽天の二次公表値のみなら公式照合済みではありません。</p>
+      <div class="details"><span>直近7日間・参考一致件数</span><strong id="week-hits">—</strong></div>
+      <div class="details"><span>抽せん前の発行記録</span><strong id="issue-count">—</strong></div>
+      <div class="table-wrap compact-wrap">
+        <table aria-label="発行済み予測の証拠状態">
+          <thead><tr><th>対象回・日付</th><th>予測番号・タイプ</th><th>参考実結果</th><th>正式採点</th></tr></thead>
+          <tbody id="issued-rows"><tr><td colspan="4">発行記録を確認中</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    <div class="columns lower">
+      <section class="panel">
+        <div class="panel-heading"><span class="kicker">ONLINE ADAPTATION / 2-HOURLY</span><h2>オンライン学習の状況</h2></div>
+        <div class="details"><span>過去再現のストレート一致</span><strong id="research-hits">—</strong></div>
+        <div class="details"><span>一様ランダム基準の一致</span><strong id="uniform-hits">—</strong></div>
+        <div class="details"><span>一様1口の理論期待回数</span><strong id="expected-hits">—</strong></div>
+        <div class="details"><span>最終再計算</span><strong id="replay-at">—</strong></div>
+        <p class="subtle">学習候補：一様モデル、直近30・100・250回の桁別平滑化モデル。過去の評価を繰り返し参照するため、これだけで予測力の優位性は実証できません。</p>
+        <a href="https://github.com/Joker7822/NUMBERS3_AI_AGENT/actions/workflows/online-learning.yml">2時間ごとのワークフロー実行履歴</a>
+      </section>
+      <section class="panel">
+        <div class="panel-heading"><span class="kicker">EVIDENCE / SAFETY FIRST</span><h2>取得元と安全監査</h2></div>
+        <div class="details"><span>直近の照合処理</span><strong id="source-at">—</strong></div>
+        <div class="details"><span>銀行取得行 / 楽天取得行</span><strong id="source-rows">—</strong></div>
+        <div class="details"><span>取得元エラー</span><strong id="source-errors">—</strong></div>
+        <div class="details"><span>実証済み予測力</span><strong class="unknown">未確認</strong></div>
+        <div id="warnings" class="warning-list"><p>監査結果を確認中です。</p></div>
+        <div class="source-links"><a href="https://www.mizuhobank.co.jp/takarakuji/check/numbers/numbers3/index.html">みずほ銀行のNumbers3結果</a><a href="https://takarakuji.rakuten.co.jp/backnumber/numbers3_past/">楽天のNumbers3結果</a><a href="https://www.takarakuji-official.jp/brand/suji/lineup-numbers3/">Numbers3の公式ルール</a></div>
+      </section>
+    </div>
+    <p class="responsibility">本サービスは研究・監査目的です。外部のコードや記事を自動実行せず、実際の宝くじ購入・自動モデル昇格・収益保証は行いません。</p>
+  </main>
+  <footer><span>© NUMBERS3 AI AGENT — INDEPENDENT RESEARCH SYSTEM</span><span>Evidence before claims · 2026</span></footer>
+</div>
+</body>
+</html>

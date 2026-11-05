@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "numbers3-ai-agent"
+version = "0.1.0"
+description = "Evidence-gated Numbers3 online learning and research dashboard"
+requires-python = ">=3.12"
+
+[project.scripts]
+numbers3-agent = "numbers3_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["numbers3_agent*"]

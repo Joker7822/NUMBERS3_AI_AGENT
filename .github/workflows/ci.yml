@@ -1,0 +1,49 @@
+name: Numbers3 CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths:
+      - 'numbers3_agent/**'
+      - 'tests/**'
+      - 'docs/**'
+      - 'pyproject.toml'
+      - '.github/workflows/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unit-and-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify Numbers3 rules, provenance, time-series isolation and prepublication safety
+        run: |
+          python -m compileall -q numbers3_agent tests
+          python -m unittest discover -s tests -v
+          node --check docs/app.js
+      - name: Generate an empty but honest research snapshot
+        run: |
+          python -m numbers3_agent.cli --root . replay > /tmp/numbers3-replay.json
+          python -m numbers3_agent.cli --root . dashboard > /tmp/numbers3-dashboard.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('/tmp/numbers3-dashboard.json').read_text())
+          assert r['product']=='Numbers3'
+          assert r['prediction_skill_confirmed'] is False
+          assert r['automatic_production_promotion'] is False
+          assert r['formally_graded_forecasts']==0
+          assert r['actual_purchase_profit_yen'] is None
+          PY

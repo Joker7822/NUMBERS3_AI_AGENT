@@ -1,0 +1,109 @@
+name: Numbers3 Online Learning 2-Hour Cycle
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'numbers3_agent/**'
+      - '.github/workflows/online-learning.yml'
+      - 'pyproject.toml'
+  workflow_dispatch:
+  schedule:
+    # 00, 02, 04, ... 22 JST. GitHub cron is UTC (JST = UTC+9).
+    # Best-effort: actual GitHub Actions starts may be delayed or skipped.
+    - cron: '0 1-23/2 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: numbers3-online-learning-main
+  cancel-in-progress: false
+jobs:
+  acquire-learn-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install bank HTML Chromium fallback
+        run: |
+          python -m pip install 'playwright>=1.50,<2'
+          python -m playwright install --with-deps chromium
+      - name: Safety regression tests before touching source evidence
+        run: |
+          python -m compileall -q numbers3_agent tests
+          python -m unittest discover -s tests -v
+      - name: Fetch online Numbers3 data, learn from past only, publish allowlisted evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'numbers3-ai-agent[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            if [ -f data/secondary_history.json ]; then months=3; else months=12; fi
+            python -m numbers3_agent.cli --root . cycle --months-back "$months" --bank-browser-fallback > /tmp/numbers3-cycle.json
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('/tmp/numbers3-cycle.json').read_text())
+          src=r['source']
+          assert r['product']=='Numbers3'
+          assert src['official_claim_requires_independent_matching'] is True
+          assert src['production_model_promoted'] is False
+          assert r['academic_search']['external_code_executed'] is False
+          print('Numbers3 latest source state:',src['status'])
+          print('Mizuho:',src['bank_rows'],'Rakuten:',src['rakuten_rows'])
+          print('Dual-publisher matched:',src['matched_rows_seen'])
+          print('Total bank-verified:',src['verified_rows_available'])
+          print('Retrospective research only:',r['learning']['evaluated_draws'])
+          if not src['matched_rows_seen']:
+              print('WARNING: no independently matched bank results. Production grading blocked.')
+          for error in src['errors'][:12]:
+              print('Source failure:',error['publisher'],error['month'],error['reason'])
+          PY
+            # Never modify an explicitly issued forecast or executable model.
+            git diff --exit-code -- data/issued_forecasts.jsonl numbers3_agent/
+            for file in data/secondary_history.json data/verified_draws.json \
+              research/last_source_audit.json research/replay.json \
+              research/round_predictions.csv research/academic_discovery.json \
+              docs/data/status.json; do
+              if [ -f "$file" ]; then git add -- "$file"; fi
+            done
+            unexpected="$(git diff --cached --name-only | grep -Ev '^(data/(secondary_history|verified_draws).json|research/(last_source_audit|replay|academic_discovery).json|research/round_predictions.csv|docs/data/status.json)$' || true)"
+            if [ -n "$unexpected" ]; then echo "::error::Unapproved evidence write: $unexpected"; exit 1; fi
+            if git diff --cached --quiet; then echo 'No new research data to publish'; exit 0; fi
+            git commit -m 'research: refresh Numbers3 publisher evidence and strictly retrospective replay'
+            if git push origin HEAD:main; then
+              echo 'Numbers3 source evidence published'
+              exit 0
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo '::error::Race to commit source evidence did not resolve'
+              exit 1
+            fi
+          done
+      - name: Publish transparent research summary
+        if: always()
+        run: |
+          {
+            echo '## Numbers3 online research (not a purchase or official skill proof)'
+            if [ -s /tmp/numbers3-cycle.json ]; then
+              python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('/tmp/numbers3-cycle.json').read_text())
+          print('- Bank verified rows total:', r['source']['verified_rows_available'])
+          print('- Secondary-only rows:', r['source']['secondary_rows_available'])
+          print('- Past-only evaluations:',r['learning']['evaluated_draws'])
+          print('- Online research papers found:',r['academic_search']['sources_found'])
+          print('- Any learned promotion authorized: NO')
+          PY
+            else
+              echo 'No complete ingestion report; inspect failed steps.'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

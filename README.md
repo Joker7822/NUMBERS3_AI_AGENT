@@ -1,5 +1,57 @@
 # NUMBERS3 AI AGENT
 
-Numbers3専用の研究・自動照合・公開ダッシュボードです。3桁の当せん結果を対象に、二次公開情報と銀行一次照合、研究用再予測、事前公開の予測を厳密に区別します。
+ナンバーズ3専用のオンライン照合・2時間ごとの研究用学習・研究方法探索・公開ダッシュボード。
 
-初期セットアップ中。出典と取得失敗を明示し、予測力の実証や購入を主張しません。
+## 対応状況
+
+| 機能 | 状態 |
+|---|---|
+| 3桁数字・先頭ゼロの保持 | 対応 |
+| ストレート・ボックス・セット・ミニ | 対応 |
+| みずほ銀行と楽天の独立照合 | 対応。両方一致した回のみ正式な結果 |
+| 楽天のみの結果 | 研究資料として保存。正式採点不可 |
+| 過去結果だけで時系列の研究予測・照合 | 対応。予測力の証明ではない |
+| Crossrefによる学術研究の探索 | 対応。検索した外部コードは実行しない |
+| GitHub Actions 2時間おき | 対応。00, 02, …, 22時 JST |
+| 直近7日間の研究用予測ダッシュボード | 対応 |
+| 実際の事前公開証拠に基づく正式成績 | 未確立。未検証の記録は採点しない |
+| 本番モデルの統計検証付き自動昇格 | 未実装 |
+| 宝くじの自動購入 | 非対応 |
+
+## Numbers3の公式ルール
+
+3桁完全一致のストレートは理論確率1/1,000。ボックスは桁順を問わず、セットはストレートとボックスの組合せです。3桁すべて同じ数字でボックス／セットは申し込めません。ミニは下2桁の順序一致、理論確率1/100。1口200円。
+
+公式ルール出典：https://www.takarakuji-official.jp/brand/suji/lineup-numbers3/
+
+## 実行方法
+
+Python 3.12以上。基本エンジンは標準ライブラリだけで動作します。
+
+- テスト： python -m unittest discover -s tests -v
+- 取得： python -m numbers3_agent.cli --root . fetch --months-back 3
+- 研究再現： python -m numbers3_agent.cli --root . replay
+- 公開画面作成： python -m numbers3_agent.cli --root . dashboard
+- 全実行： python -m numbers3_agent.cli --root . cycle --months-back 3
+
+銀行のJavaScript画面を表示するオプションは --bank-browser-fallback。GitHubの自動実行ではPlaywrightとChromiumをインストールします。
+
+## 自動更新・監査
+
+自動実行設定は .github/workflows/online-learning.yml です。cronはUTCで 0 1-23/2 * * *。毎日00,02,04,…22時 JSTに相当し、GitHub Actionsの遅延・スキップがあり得ます。初回は直近12ヶ月、次からは直近3ヶ月の結果取得を試みます。
+
+- data/verified_draws.json：銀行＋楽天の回号・日付・数字が一致した結果のみ。
+- data/secondary_history.json：楽天のみの参考履歴。銀行公式未照合。
+- research/replay.json：前の回までの情報だけで再予測する研究レポート。
+- research/round_predictions.csv：研究用逐次予測・実結果の回別記録。
+- research/academic_discovery.json：安全に取得した学術論文のDOI・題名。
+- docs/data/status.json：ダッシュボードの公開データ。
+- data/issued_forecasts.jsonl：明示的に事前発行した予測記録。独立したGitHubのサーバー時刻の確認機能は未実装のため、正式採点に流用しません。
+
+ダッシュボードは docs/index.html 。GitHub Pagesの設定が必要です。
+
+一次公表元：https://www.mizuhobank.co.jp/takarakuji/check/numbers/numbers3/index.html
+
+二次公表元：https://takarakuji.rakuten.co.jp/backnumber/numbers3_past/
+
+**Numbers4の結果、4桁番号、過去の的中実績は一切流用していません。** 過去データに対する研究比較は将来の有意な予測力を証明しません。購入、収益、モデル自動昇格の主張は行いません。
