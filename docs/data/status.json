@@ -1,7 +1,7 @@
 {
   "version": "numbers3-dashboard-v1",
   "product": "Numbers3",
-  "generated_at_jst": "2026-11-06T03:38:55+09:00",
+  "generated_at_jst": "2026-11-06T09:00:59+09:00",
   "latest_verified_draw": null,
   "latest_secondary_draw": {
     "round": 7108,
@@ -13,15 +13,15 @@
   "research_historical_extension": {
     "product": "Numbers3",
     "status": "extended_secondary_history_not_officially_verified",
-    "checked_at_jst": "2026-11-06T03:38:39+09:00",
+    "checked_at_jst": "2026-11-06T09:00:43+09:00",
     "archive_url": "https://hazimekom.github.io/numbers4-api/api/v2/games/numbers3/draws.min.json",
-    "previous_research_rows": 7107,
+    "previous_research_rows": 7108,
     "rakuten_rows": 241,
     "overlap_count": 241,
     "official_bank_verified": false,
     "prediction_skill_confirmed": false,
     "production_promotion_allowed": false,
-    "new_research_rows": 1,
+    "new_research_rows": 0,
     "github_archive_rows": 7108,
     "total_research_rows": 7108,
     "github_archive_response_sha256": "9eab1595496c82c3075d96eb60075361f30fb7e27a92d7d5637253409eaf95d7"
@@ -30,7 +30,7 @@
   "formally_graded_forecasts": 0,
   "source_audit": {
     "product": "Numbers3",
-    "checked_at_jst": "2026-11-06T03:38:05+09:00",
+    "checked_at_jst": "2026-11-06T09:00:09+09:00",
     "status": "secondary_only_not_officially_verified",
     "bank_rows": 0,
     "rakuten_rows": 48,
@@ -390,14 +390,14 @@
     "prediction_skill_confirmed": false,
     "production_model_changed": false,
     "interpretation": "Retrospective selection repeatedly uses historical cohorts; no independent prospective evidence.",
-    "generated_at_jst": "2026-11-06T03:38:40+09:00",
+    "generated_at_jst": "2026-11-06T09:00:44+09:00",
     "replay_sha256": "0dd79c682152843a3690663192b8e13dd16bc2556d3442fdd1c983aa9cd12c1a"
   },
   "academic_discovery": {
     "version": "numbers3-academic-discovery-v1",
-    "generated_at_jst": "2026-11-06T03:38:54+09:00",
+    "generated_at_jst": "2026-11-06T09:00:59+09:00",
     "queries": 2,
-    "sources_found": 10,
+    "sources_found": 5,
     "items": [
       {
         "doi": "10.5040/9781718219342.ch-014",
@@ -428,39 +428,14 @@
         "title": "Sequential Multiple Testing of Multiple Composite Hypotheses: an Asymptotic Optimality Theory with General Information Functions",
         "url": "https://doi.org/10.5705/ss.202025.0042",
         "hypothesis_only": true
-      },
-      {
-        "doi": "10.15556/ijsim.04.03.001",
-        "title": "The Development of Loyalty with Online Services Customers",
-        "url": "https://doi.org/10.15556/ijsim.04.03.001",
-        "hypothesis_only": true
-      },
-      {
-        "doi": "10.15556/ijsim.02.03.001",
-        "title": "Understanding Online News: Uses and Gratifications of Mainstream News Sites and Social Media",
-        "url": "https://doi.org/10.15556/ijsim.02.03.001",
-        "hypothesis_only": true
-      },
-      {
-        "doi": "10.15556/ijiim.02.01.003",
-        "title": "Learner profiles and the process of Learning in the Higher Educational Context",
-        "url": "https://doi.org/10.15556/ijiim.02.01.003",
-        "hypothesis_only": true
-      },
-      {
-        "doi": "10.15556/ijiim.01.02.002",
-        "title": "WEB-BASED COLLABORATIVE LEARNING AND KNOWLEDGE SHARING IN INFORMAL BUSINESS NETWORKS",
-        "url": "https://doi.org/10.15556/ijiim.01.02.002",
-        "hypothesis_only": true
-      },
-      {
-        "doi": "10.18535/ijetst/v3i08.10",
-        "title": "Contour Based Real Time Multiple Object Tracking",
-        "url": "https://doi.org/10.18535/ijetst/v3i08.10",
-        "hypothesis_only": true
       }
     ],
-    "errors": [],
+    "errors": [
+      {
+        "topic": "time series calibration online learning",
+        "reason": "HTTPError"
+      }
+    ],
     "external_code_executed": false,
     "search_results_changed_model_weights": false,
     "prediction_skill_confirmed": false,
