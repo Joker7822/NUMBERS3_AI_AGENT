@@ -1,7 +1,7 @@
 {
   "product": "Numbers3",
   "status": "single_rakuten_publisher_not_officially_verified",
-  "updated_at_jst": "2026-11-07T01:40:17+09:00",
+  "updated_at_jst": "2026-11-10T07:56:29+09:00",
   "rows": [
     {
       "round": 6868,
@@ -1212,6 +1212,11 @@
       "round": 7109,
       "draw_date": "2026-11-06",
       "winning_number": "947"
+    },
+    {
+      "round": 7110,
+      "draw_date": "2026-11-09",
+      "winning_number": "205"
     }
   ],
   "official_draw_verified": false,

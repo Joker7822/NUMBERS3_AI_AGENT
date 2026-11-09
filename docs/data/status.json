@@ -1,42 +1,42 @@
 {
   "version": "numbers3-dashboard-v1",
   "product": "Numbers3",
-  "generated_at_jst": "2026-11-09T20:12:09+09:00",
+  "generated_at_jst": "2026-11-10T07:57:22+09:00",
   "latest_verified_draw": null,
   "latest_secondary_draw": {
-    "round": 7109,
-    "draw_date": "2026-11-06",
-    "winning_number": "947"
+    "round": 7110,
+    "draw_date": "2026-11-09",
+    "winning_number": "205"
   },
   "verified_draws": 0,
-  "secondary_research_draws": 7109,
+  "secondary_research_draws": 7110,
   "research_historical_extension": {
     "product": "Numbers3",
     "status": "extended_secondary_history_not_officially_verified",
-    "checked_at_jst": "2026-11-09T20:11:50+09:00",
+    "checked_at_jst": "2026-11-10T07:57:04+09:00",
     "archive_url": "https://hazimekom.github.io/numbers4-api/api/v2/games/numbers3/draws.min.json",
     "previous_research_rows": 7109,
-    "rakuten_rows": 242,
-    "overlap_count": 242,
+    "rakuten_rows": 243,
+    "overlap_count": 243,
     "official_bank_verified": false,
     "prediction_skill_confirmed": false,
     "production_promotion_allowed": false,
-    "new_research_rows": 0,
-    "github_archive_rows": 7109,
-    "total_research_rows": 7109,
-    "github_archive_response_sha256": "1dc266d7cdd2b351305ce14e76fb61fea27775dfc8a1080ae7e8cda02af50b4f"
+    "new_research_rows": 1,
+    "github_archive_rows": 7110,
+    "total_research_rows": 7110,
+    "github_archive_response_sha256": "8014acd196d36957adf9fdb9f25f73c61da4c951697f19051de0ed6ac9c03f52"
   },
   "issued_forecasts": 0,
   "formally_graded_forecasts": 0,
   "source_audit": {
     "product": "Numbers3",
-    "checked_at_jst": "2026-11-09T20:11:16+09:00",
+    "checked_at_jst": "2026-11-10T07:56:29+09:00",
     "status": "secondary_only_not_officially_verified",
     "bank_rows": 0,
-    "rakuten_rows": 49,
+    "rakuten_rows": 50,
     "matched_rows_seen": 0,
     "new_verified_rows": 0,
-    "secondary_rows_available": 242,
+    "secondary_rows_available": 243,
     "verified_rows_available": 0,
     "errors": [
       {
@@ -63,28 +63,40 @@
     "status": "historical_walk_forward_reconstruction_only",
     "data_scope": "two_secondary_publishers_overlap_checked_not_bank_verified",
     "first_recorded_round": 1,
-    "last_recorded_round": 7109,
-    "evaluated_draws": 7108,
+    "last_recorded_round": 7110,
+    "evaluated_draws": 7109,
     "research_straight_hits": 6,
     "reference_straight_hits": 6,
-    "theoretical_uniform_expected_straight_hits": 7.108,
+    "theoretical_uniform_expected_straight_hits": 7.109,
     "research_model_counts": {
-      "uniform": 6755,
+      "uniform": 6756,
       "positional_30_alpha5": 125,
       "positional_100_alpha10": 24,
       "positional_250_alpha20": 204
     },
     "next_research_candidate": {
-      "round": 7110,
+      "round": 7111,
       "draw_date": null,
-      "number": "329",
+      "number": "742",
       "model": "uniform",
-      "training_last_round": 7109,
+      "training_last_round": 7110,
       "status": "research_only_not_issued_not_purchased",
       "officially_verified": false,
       "actual_purchase": false
     },
     "recent_rounds": [
+      {
+        "round": 7110,
+        "draw_date": "2026-11-09",
+        "actual": "205",
+        "data_cutoff_round": 7109,
+        "research_number": "329",
+        "research_model": "uniform",
+        "research_hit": 0,
+        "uniform_number": "329",
+        "uniform_hit": 0,
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
+      },
       {
         "round": 7109,
         "draw_date": "2026-11-06",
@@ -372,30 +384,18 @@
         "uniform_number": "156",
         "uniform_hit": 0,
         "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
-      },
-      {
-        "round": 7085,
-        "draw_date": "2026-10-05",
-        "actual": "869",
-        "data_cutoff_round": 7084,
-        "research_number": "240",
-        "research_model": "uniform",
-        "research_hit": 0,
-        "uniform_number": "240",
-        "uniform_hit": 0,
-        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       }
     ],
     "officially_verified": false,
     "prediction_skill_confirmed": false,
     "production_model_changed": false,
     "interpretation": "Retrospective selection repeatedly uses historical cohorts; no independent prospective evidence.",
-    "generated_at_jst": "2026-11-09T20:11:51+09:00",
-    "replay_sha256": "479500c031457ae142e34f32998fd05eb91d0f673524f710c5272fe80d854aac"
+    "generated_at_jst": "2026-11-10T07:57:04+09:00",
+    "replay_sha256": "53347fe759cc7bf5f8748c138e73e06544a440b271d3b0311a5c671557342e75"
   },
   "academic_discovery": {
     "version": "numbers3-academic-discovery-v1",
-    "generated_at_jst": "2026-11-09T20:12:06+09:00",
+    "generated_at_jst": "2026-11-10T07:57:19+09:00",
     "queries": 2,
     "sources_found": 10,
     "items": [
@@ -467,9 +467,21 @@
     "status": "search_completed"
   },
   "recent_week": {
-    "start_date": "2026-11-03",
-    "end_date": "2026-11-09",
+    "start_date": "2026-11-04",
+    "end_date": "2026-11-10",
     "retrospective_rows": [
+      {
+        "round": 7110,
+        "draw_date": "2026-11-09",
+        "actual": "205",
+        "data_cutoff_round": 7109,
+        "research_number": "329",
+        "research_model": "uniform",
+        "research_hit": 0,
+        "uniform_number": "329",
+        "uniform_hit": 0,
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
+      },
       {
         "round": 7109,
         "draw_date": "2026-11-06",
@@ -503,18 +515,6 @@
         "research_model": "uniform",
         "research_hit": 0,
         "uniform_number": "369",
-        "uniform_hit": 0,
-        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
-      },
-      {
-        "round": 7106,
-        "draw_date": "2026-11-03",
-        "actual": "753",
-        "data_cutoff_round": 7105,
-        "research_number": "390",
-        "research_model": "uniform",
-        "research_hit": 0,
-        "uniform_number": "390",
         "uniform_hit": 0,
         "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       }
