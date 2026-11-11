@@ -1,12 +1,12 @@
 {
   "product": "Numbers3",
-  "checked_at_jst": "2026-11-11T19:35:32+09:00",
+  "checked_at_jst": "2026-11-12T03:30:20+09:00",
   "status": "secondary_only_not_officially_verified",
   "bank_rows": 0,
-  "rakuten_rows": 51,
+  "rakuten_rows": 52,
   "matched_rows_seen": 0,
   "new_verified_rows": 0,
-  "secondary_rows_available": 244,
+  "secondary_rows_available": 245,
   "verified_rows_available": 0,
   "errors": [
     {
