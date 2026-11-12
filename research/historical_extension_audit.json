@@ -1,16 +1,16 @@
 {
   "product": "Numbers3",
   "status": "extended_secondary_history_not_officially_verified",
-  "checked_at_jst": "2026-11-12T19:50:41+09:00",
+  "checked_at_jst": "2026-11-13T03:46:31+09:00",
   "archive_url": "https://hazimekom.github.io/numbers4-api/api/v2/games/numbers3/draws.min.json",
   "previous_research_rows": 7112,
-  "rakuten_rows": 245,
-  "overlap_count": 245,
+  "rakuten_rows": 246,
+  "overlap_count": 246,
   "official_bank_verified": false,
   "prediction_skill_confirmed": false,
   "production_promotion_allowed": false,
-  "new_research_rows": 0,
-  "github_archive_rows": 7112,
-  "total_research_rows": 7112,
-  "github_archive_response_sha256": "ba7a5f46f5cac07ab33f7d2f60f02302a4b983a91a3bdd027f62abcbd1805e77"
+  "new_research_rows": 1,
+  "github_archive_rows": 7113,
+  "total_research_rows": 7113,
+  "github_archive_response_sha256": "b36d2ea1afd172a67a897145cd9a4a8f63a41a0fb6cb26d2529c8112134f65d9"
 }
