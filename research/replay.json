@@ -330,6 +330,6 @@
   "prediction_skill_confirmed": false,
   "production_model_changed": false,
   "interpretation": "Retrospective selection repeatedly uses historical cohorts; no independent prospective evidence.",
-  "generated_at_jst": "2026-11-12T10:26:15+09:00",
+  "generated_at_jst": "2026-11-12T19:50:41+09:00",
   "replay_sha256": "62786b5f27e7095a9b229f90f8c51aa6abcaf29c29b06b54551fa6adddeb845d"
 }
