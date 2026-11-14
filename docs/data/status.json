@@ -1,7 +1,7 @@
 {
   "version": "numbers3-dashboard-v1",
   "product": "Numbers3",
-  "generated_at_jst": "2026-11-14T02:05:09+09:00",
+  "generated_at_jst": "2026-11-14T09:17:06+09:00",
   "latest_verified_draw": null,
   "latest_secondary_draw": {
     "round": 7114,
@@ -13,15 +13,15 @@
   "research_historical_extension": {
     "product": "Numbers3",
     "status": "extended_secondary_history_not_officially_verified",
-    "checked_at_jst": "2026-11-14T02:04:45+09:00",
+    "checked_at_jst": "2026-11-14T09:16:57+09:00",
     "archive_url": "https://hazimekom.github.io/numbers4-api/api/v2/games/numbers3/draws.min.json",
-    "previous_research_rows": 7113,
+    "previous_research_rows": 7114,
     "rakuten_rows": 247,
     "overlap_count": 247,
     "official_bank_verified": false,
     "prediction_skill_confirmed": false,
     "production_promotion_allowed": false,
-    "new_research_rows": 1,
+    "new_research_rows": 0,
     "github_archive_rows": 7114,
     "total_research_rows": 7114,
     "github_archive_response_sha256": "d12eeba63df71467b96a6e7d13638ecc14e150d303b013727a158e7863204138"
@@ -30,7 +30,7 @@
   "formally_graded_forecasts": 0,
   "source_audit": {
     "product": "Numbers3",
-    "checked_at_jst": "2026-11-14T02:04:10+09:00",
+    "checked_at_jst": "2026-11-14T09:16:24+09:00",
     "status": "secondary_only_not_officially_verified",
     "bank_rows": 0,
     "rakuten_rows": 54,
@@ -390,12 +390,12 @@
     "prediction_skill_confirmed": false,
     "production_model_changed": false,
     "interpretation": "Retrospective selection repeatedly uses historical cohorts; no independent prospective evidence.",
-    "generated_at_jst": "2026-11-14T02:04:45+09:00",
+    "generated_at_jst": "2026-11-14T09:16:58+09:00",
     "replay_sha256": "3d99b48f92ae923d5716a6cab04e131cc0a1356e894cba0de46397f35141e9cf"
   },
   "academic_discovery": {
     "version": "numbers3-academic-discovery-v1",
-    "generated_at_jst": "2026-11-14T02:04:56+09:00",
+    "generated_at_jst": "2026-11-14T09:17:05+09:00",
     "queries": 2,
     "sources_found": 10,
     "items": [
