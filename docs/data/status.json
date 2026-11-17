@@ -1,7 +1,7 @@
 {
   "version": "numbers3-dashboard-v1",
   "product": "Numbers3",
-  "generated_at_jst": "2026-11-17T04:27:42+09:00",
+  "generated_at_jst": "2026-11-17T12:36:03+09:00",
   "latest_verified_draw": null,
   "latest_secondary_draw": {
     "round": 7115,
@@ -13,15 +13,15 @@
   "research_historical_extension": {
     "product": "Numbers3",
     "status": "extended_secondary_history_not_officially_verified",
-    "checked_at_jst": "2026-11-17T04:27:33+09:00",
+    "checked_at_jst": "2026-11-17T12:35:45+09:00",
     "archive_url": "https://hazimekom.github.io/numbers4-api/api/v2/games/numbers3/draws.min.json",
-    "previous_research_rows": 7114,
+    "previous_research_rows": 7115,
     "rakuten_rows": 248,
     "overlap_count": 248,
     "official_bank_verified": false,
     "prediction_skill_confirmed": false,
     "production_promotion_allowed": false,
-    "new_research_rows": 1,
+    "new_research_rows": 0,
     "github_archive_rows": 7115,
     "total_research_rows": 7115,
     "github_archive_response_sha256": "0476b07c2af12ad634194c96cff73563de7fc34fe1186fc3060da5a86207b820"
@@ -30,7 +30,7 @@
   "formally_graded_forecasts": 0,
   "source_audit": {
     "product": "Numbers3",
-    "checked_at_jst": "2026-11-17T04:27:31+09:00",
+    "checked_at_jst": "2026-11-17T12:35:13+09:00",
     "status": "secondary_only_not_officially_verified",
     "bank_rows": 0,
     "rakuten_rows": 55,
@@ -42,17 +42,17 @@
       {
         "publisher": "bank",
         "month": "2026-11",
-        "reason": "publisher request unavailable: HTTPError"
+        "reason": "not a Numbers3 Mizuho result page"
       },
       {
         "publisher": "bank",
         "month": "2026-10",
-        "reason": "publisher request unavailable: HTTPError"
+        "reason": "not a Numbers3 Mizuho result page"
       },
       {
         "publisher": "bank",
         "month": "2026-09",
-        "reason": "publisher request unavailable: HTTPError"
+        "reason": "not a Numbers3 Mizuho result page"
       }
     ],
     "production_model_promoted": false,
@@ -390,12 +390,12 @@
     "prediction_skill_confirmed": false,
     "production_model_changed": false,
     "interpretation": "Retrospective selection repeatedly uses historical cohorts; no independent prospective evidence.",
-    "generated_at_jst": "2026-11-17T04:27:33+09:00",
+    "generated_at_jst": "2026-11-17T12:35:46+09:00",
     "replay_sha256": "767e4bf71c6a0963943cf2599b5cfb610f84fc86c4f6511a290123ad93f19d80"
   },
   "academic_discovery": {
     "version": "numbers3-academic-discovery-v1",
-    "generated_at_jst": "2026-11-17T04:27:42+09:00",
+    "generated_at_jst": "2026-11-17T12:36:00+09:00",
     "queries": 2,
     "sources_found": 10,
     "items": [
