@@ -1,7 +1,7 @@
 {
   "version": "numbers3-dashboard-v1",
   "product": "Numbers3",
-  "generated_at_jst": "2026-11-19T23:14:43+09:00",
+  "generated_at_jst": "2026-11-20T07:38:23+09:00",
   "latest_verified_draw": null,
   "latest_secondary_draw": {
     "round": 7117,
@@ -13,15 +13,15 @@
   "research_historical_extension": {
     "product": "Numbers3",
     "status": "extended_secondary_history_not_officially_verified",
-    "checked_at_jst": "2026-11-19T23:14:35+09:00",
+    "checked_at_jst": "2026-11-20T07:38:07+09:00",
     "archive_url": "https://hazimekom.github.io/numbers4-api/api/v2/games/numbers3/draws.min.json",
-    "previous_research_rows": 7117,
+    "previous_research_rows": 7118,
     "rakuten_rows": 250,
     "overlap_count": 250,
     "official_bank_verified": false,
     "prediction_skill_confirmed": false,
     "production_promotion_allowed": false,
-    "new_research_rows": 1,
+    "new_research_rows": 0,
     "github_archive_rows": 7118,
     "total_research_rows": 7118,
     "github_archive_response_sha256": "d679ba6983c0ecd7465f995b69215f118a0363f6b2f5c556784f347cbcbf25a0"
@@ -30,7 +30,7 @@
   "formally_graded_forecasts": 0,
   "source_audit": {
     "product": "Numbers3",
-    "checked_at_jst": "2026-11-19T23:14:03+09:00",
+    "checked_at_jst": "2026-11-20T07:37:34+09:00",
     "status": "sources_unavailable",
     "bank_rows": 0,
     "rakuten_rows": 0,
@@ -405,12 +405,12 @@
     "prediction_skill_confirmed": false,
     "production_model_changed": false,
     "interpretation": "Retrospective selection repeatedly uses historical cohorts; no independent prospective evidence.",
-    "generated_at_jst": "2026-11-19T23:14:35+09:00",
+    "generated_at_jst": "2026-11-20T07:38:08+09:00",
     "replay_sha256": "717322f8bdcd7a3659e537f65497a6f2205c8608f74da7059f7170847c9c2066"
   },
   "academic_discovery": {
     "version": "numbers3-academic-discovery-v1",
-    "generated_at_jst": "2026-11-19T23:14:42+09:00",
+    "generated_at_jst": "2026-11-20T07:38:22+09:00",
     "queries": 2,
     "sources_found": 10,
     "items": [
@@ -482,8 +482,8 @@
     "status": "search_completed"
   },
   "recent_week": {
-    "start_date": "2026-11-13",
-    "end_date": "2026-11-19",
+    "start_date": "2026-11-14",
+    "end_date": "2026-11-20",
     "retrospective_rows": [
       {
         "round": 7118,
@@ -530,18 +530,6 @@
         "research_model": "uniform",
         "research_hit": 0,
         "uniform_number": "229",
-        "uniform_hit": 0,
-        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
-      },
-      {
-        "round": 7114,
-        "draw_date": "2026-11-13",
-        "actual": "605",
-        "data_cutoff_round": 7113,
-        "research_number": "150",
-        "research_model": "uniform",
-        "research_hit": 0,
-        "uniform_number": "150",
         "uniform_hit": 0,
         "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       }
