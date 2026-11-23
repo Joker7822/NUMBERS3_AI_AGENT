@@ -1,42 +1,42 @@
 {
   "version": "numbers3-dashboard-v1",
   "product": "Numbers3",
-  "generated_at_jst": "2026-11-23T17:48:30+09:00",
+  "generated_at_jst": "2026-11-24T06:04:47+09:00",
   "latest_verified_draw": null,
   "latest_secondary_draw": {
-    "round": 7119,
-    "draw_date": "2026-11-20",
-    "winning_number": "934"
+    "round": 7120,
+    "draw_date": "2026-11-23",
+    "winning_number": "762"
   },
   "verified_draws": 0,
-  "secondary_research_draws": 7119,
+  "secondary_research_draws": 7120,
   "research_historical_extension": {
     "product": "Numbers3",
     "status": "extended_secondary_history_not_officially_verified",
-    "checked_at_jst": "2026-11-23T17:48:19+09:00",
+    "checked_at_jst": "2026-11-24T06:04:32+09:00",
     "archive_url": "https://hazimekom.github.io/numbers4-api/api/v2/games/numbers3/draws.min.json",
     "previous_research_rows": 7119,
-    "rakuten_rows": 252,
-    "overlap_count": 252,
+    "rakuten_rows": 253,
+    "overlap_count": 253,
     "official_bank_verified": false,
     "prediction_skill_confirmed": false,
     "production_promotion_allowed": false,
-    "new_research_rows": 0,
-    "github_archive_rows": 7119,
-    "total_research_rows": 7119,
-    "github_archive_response_sha256": "e2d73997b237ad3418bcb161e646ed7721af5bf9f16f47d468b031750bb33122"
+    "new_research_rows": 1,
+    "github_archive_rows": 7120,
+    "total_research_rows": 7120,
+    "github_archive_response_sha256": "649a49b893f7e982da76f24d56d072ca31481c7e63df131d5bf9d601c4916ebb"
   },
   "issued_forecasts": 0,
   "formally_graded_forecasts": 0,
   "source_audit": {
     "product": "Numbers3",
-    "checked_at_jst": "2026-11-23T17:47:46+09:00",
+    "checked_at_jst": "2026-11-24T06:03:58+09:00",
     "status": "secondary_only_not_officially_verified",
     "bank_rows": 0,
-    "rakuten_rows": 59,
+    "rakuten_rows": 60,
     "matched_rows_seen": 0,
     "new_verified_rows": 0,
-    "secondary_rows_available": 252,
+    "secondary_rows_available": 253,
     "verified_rows_available": 0,
     "errors": [
       {
@@ -63,28 +63,40 @@
     "status": "historical_walk_forward_reconstruction_only",
     "data_scope": "two_secondary_publishers_overlap_checked_not_bank_verified",
     "first_recorded_round": 1,
-    "last_recorded_round": 7119,
-    "evaluated_draws": 7118,
+    "last_recorded_round": 7120,
+    "evaluated_draws": 7119,
     "research_straight_hits": 6,
     "reference_straight_hits": 6,
-    "theoretical_uniform_expected_straight_hits": 7.118,
+    "theoretical_uniform_expected_straight_hits": 7.119,
     "research_model_counts": {
-      "uniform": 6765,
+      "uniform": 6766,
       "positional_30_alpha5": 125,
       "positional_100_alpha10": 24,
       "positional_250_alpha20": 204
     },
     "next_research_candidate": {
-      "round": 7120,
+      "round": 7121,
       "draw_date": null,
-      "number": "122",
+      "number": "933",
       "model": "uniform",
-      "training_last_round": 7119,
+      "training_last_round": 7120,
       "status": "research_only_not_issued_not_purchased",
       "officially_verified": false,
       "actual_purchase": false
     },
     "recent_rounds": [
+      {
+        "round": 7120,
+        "draw_date": "2026-11-23",
+        "actual": "762",
+        "data_cutoff_round": 7119,
+        "research_number": "122",
+        "research_model": "uniform",
+        "research_hit": 0,
+        "uniform_number": "122",
+        "uniform_hit": 0,
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
+      },
       {
         "round": 7119,
         "draw_date": "2026-11-20",
@@ -372,32 +384,20 @@
         "uniform_number": "269",
         "uniform_hit": 0,
         "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
-      },
-      {
-        "round": 7095,
-        "draw_date": "2026-10-19",
-        "actual": "208",
-        "data_cutoff_round": 7094,
-        "research_number": "788",
-        "research_model": "uniform",
-        "research_hit": 0,
-        "uniform_number": "788",
-        "uniform_hit": 0,
-        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       }
     ],
     "officially_verified": false,
     "prediction_skill_confirmed": false,
     "production_model_changed": false,
     "interpretation": "Retrospective selection repeatedly uses historical cohorts; no independent prospective evidence.",
-    "generated_at_jst": "2026-11-23T17:48:19+09:00",
-    "replay_sha256": "b09649c6f777ca7192c9311fad2cee1a2b3c6f19a514371cb1fcf7ee897992c0"
+    "generated_at_jst": "2026-11-24T06:04:32+09:00",
+    "replay_sha256": "ca0fb28f92bc5353ec4ba37ae16822c396895a9fc85cc61d4a6f9da02844b491"
   },
   "academic_discovery": {
     "version": "numbers3-academic-discovery-v1",
-    "generated_at_jst": "2026-11-23T17:48:30+09:00",
+    "generated_at_jst": "2026-11-24T06:04:47+09:00",
     "queries": 2,
-    "sources_found": 5,
+    "sources_found": 10,
     "items": [
       {
         "doi": "10.5040/9781718219342.ch-014",
@@ -428,23 +428,60 @@
         "title": "Sequential Multiple Testing of Multiple Composite Hypotheses: an Asymptotic Optimality Theory with General Information Functions",
         "url": "https://doi.org/10.5705/ss.202025.0042",
         "hypothesis_only": true
-      }
-    ],
-    "errors": [
+      },
       {
-        "topic": "time series calibration online learning",
-        "reason": "HTTPError"
+        "doi": "10.15556/ijsim.04.03.001",
+        "title": "The Development of Loyalty with Online Services Customers",
+        "url": "https://doi.org/10.15556/ijsim.04.03.001",
+        "hypothesis_only": true
+      },
+      {
+        "doi": "10.15556/ijsim.02.03.001",
+        "title": "Understanding Online News: Uses and Gratifications of Mainstream News Sites and Social Media",
+        "url": "https://doi.org/10.15556/ijsim.02.03.001",
+        "hypothesis_only": true
+      },
+      {
+        "doi": "10.15556/ijiim.02.01.003",
+        "title": "Learner profiles and the process of Learning in the Higher Educational Context",
+        "url": "https://doi.org/10.15556/ijiim.02.01.003",
+        "hypothesis_only": true
+      },
+      {
+        "doi": "10.15556/ijiim.01.02.002",
+        "title": "WEB-BASED COLLABORATIVE LEARNING AND KNOWLEDGE SHARING IN INFORMAL BUSINESS NETWORKS",
+        "url": "https://doi.org/10.15556/ijiim.01.02.002",
+        "hypothesis_only": true
+      },
+      {
+        "doi": "10.18535/ijetst/v3i08.10",
+        "title": "Contour Based Real Time Multiple Object Tracking",
+        "url": "https://doi.org/10.18535/ijetst/v3i08.10",
+        "hypothesis_only": true
       }
     ],
+    "errors": [],
     "external_code_executed": false,
     "search_results_changed_model_weights": false,
     "prediction_skill_confirmed": false,
     "status": "search_completed"
   },
   "recent_week": {
-    "start_date": "2026-11-17",
-    "end_date": "2026-11-23",
+    "start_date": "2026-11-18",
+    "end_date": "2026-11-24",
     "retrospective_rows": [
+      {
+        "round": 7120,
+        "draw_date": "2026-11-23",
+        "actual": "762",
+        "data_cutoff_round": 7119,
+        "research_number": "122",
+        "research_model": "uniform",
+        "research_hit": 0,
+        "uniform_number": "122",
+        "uniform_hit": 0,
+        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
+      },
       {
         "round": 7119,
         "draw_date": "2026-11-20",
@@ -478,18 +515,6 @@
         "research_model": "uniform",
         "research_hit": 0,
         "uniform_number": "271",
-        "uniform_hit": 0,
-        "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
-      },
-      {
-        "round": 7116,
-        "draw_date": "2026-11-17",
-        "actual": "069",
-        "data_cutoff_round": 7115,
-        "research_number": "290",
-        "research_model": "uniform",
-        "research_hit": 0,
-        "uniform_number": "290",
         "uniform_hit": 0,
         "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
       }

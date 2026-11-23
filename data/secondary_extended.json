@@ -3,10 +3,10 @@
   "status": "two_secondary_publishers_overlap_checked_not_bank_verified",
   "official_bank_verified": false,
   "production_promotion_allowed": false,
-  "overlap_count": 252,
-  "updated_at_jst": "2026-11-20T22:55:55+09:00",
+  "overlap_count": 253,
+  "updated_at_jst": "2026-11-24T06:04:32+09:00",
   "github_archive_url": "https://hazimekom.github.io/numbers4-api/api/v2/games/numbers3/draws.min.json",
-  "github_archive_sha256": "e2d73997b237ad3418bcb161e646ed7721af5bf9f16f47d468b031750bb33122",
+  "github_archive_sha256": "649a49b893f7e982da76f24d56d072ca31481c7e63df131d5bf9d601c4916ebb",
   "source_independence_proven": false,
   "rows": [
     {
@@ -35603,6 +35603,11 @@
       "round": 7119,
       "draw_date": "2026-11-20",
       "winning_number": "934"
+    },
+    {
+      "round": 7120,
+      "draw_date": "2026-11-23",
+      "winning_number": "762"
     }
   ]
 }
