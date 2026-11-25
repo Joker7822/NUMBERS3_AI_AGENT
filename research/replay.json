@@ -3,28 +3,40 @@
   "status": "historical_walk_forward_reconstruction_only",
   "data_scope": "two_secondary_publishers_overlap_checked_not_bank_verified",
   "first_recorded_round": 1,
-  "last_recorded_round": 7121,
-  "evaluated_draws": 7120,
+  "last_recorded_round": 7122,
+  "evaluated_draws": 7121,
   "research_straight_hits": 6,
   "reference_straight_hits": 6,
-  "theoretical_uniform_expected_straight_hits": 7.12,
+  "theoretical_uniform_expected_straight_hits": 7.121,
   "research_model_counts": {
-    "uniform": 6767,
+    "uniform": 6768,
     "positional_30_alpha5": 125,
     "positional_100_alpha10": 24,
     "positional_250_alpha20": 204
   },
   "next_research_candidate": {
-    "round": 7122,
+    "round": 7123,
     "draw_date": null,
-    "number": "845",
+    "number": "627",
     "model": "uniform",
-    "training_last_round": 7121,
+    "training_last_round": 7122,
     "status": "research_only_not_issued_not_purchased",
     "officially_verified": false,
     "actual_purchase": false
   },
   "recent_rounds": [
+    {
+      "round": 7122,
+      "draw_date": "2026-11-25",
+      "actual": "611",
+      "data_cutoff_round": 7121,
+      "research_number": "845",
+      "research_model": "uniform",
+      "research_hit": 0,
+      "uniform_number": "845",
+      "uniform_hit": 0,
+      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
+    },
     {
       "round": 7121,
       "draw_date": "2026-11-24",
@@ -312,24 +324,12 @@
       "uniform_number": "759",
       "uniform_hit": 0,
       "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
-    },
-    {
-      "round": 7097,
-      "draw_date": "2026-10-21",
-      "actual": "725",
-      "data_cutoff_round": 7096,
-      "research_number": "948",
-      "research_model": "uniform",
-      "research_hit": 0,
-      "uniform_number": "948",
-      "uniform_hit": 0,
-      "source_status": "two_secondary_publishers_overlap_checked_not_bank_verified"
     }
   ],
   "officially_verified": false,
   "prediction_skill_confirmed": false,
   "production_model_changed": false,
   "interpretation": "Retrospective selection repeatedly uses historical cohorts; no independent prospective evidence.",
-  "generated_at_jst": "2026-11-25T11:59:06+09:00",
-  "replay_sha256": "76e83789154d0d269df1ca76fdb54ae72c29a970386426fe2af91c59762f6527"
+  "generated_at_jst": "2026-11-25T21:37:12+09:00",
+  "replay_sha256": "bd4426d4fafd19bcf0ea61383bf550b3f4107a94c1ab45836cf800b1df61419f"
 }
