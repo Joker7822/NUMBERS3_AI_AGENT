@@ -1,7 +1,7 @@
 {
   "version": "numbers3-dashboard-v1",
   "product": "Numbers3",
-  "generated_at_jst": "2026-11-27T08:38:32+09:00",
+  "generated_at_jst": "2026-11-27T18:33:49+09:00",
   "latest_verified_draw": null,
   "latest_secondary_draw": {
     "round": 7123,
@@ -13,7 +13,7 @@
   "research_historical_extension": {
     "product": "Numbers3",
     "status": "extended_secondary_history_not_officially_verified",
-    "checked_at_jst": "2026-11-27T08:38:22+09:00",
+    "checked_at_jst": "2026-11-27T18:33:33+09:00",
     "archive_url": "https://hazimekom.github.io/numbers4-api/api/v2/games/numbers3/draws.min.json",
     "previous_research_rows": 7123,
     "rakuten_rows": 256,
@@ -30,7 +30,7 @@
   "formally_graded_forecasts": 0,
   "source_audit": {
     "product": "Numbers3",
-    "checked_at_jst": "2026-11-27T08:37:49+09:00",
+    "checked_at_jst": "2026-11-27T18:33:00+09:00",
     "status": "secondary_only_not_officially_verified",
     "bank_rows": 0,
     "rakuten_rows": 63,
@@ -390,12 +390,12 @@
     "prediction_skill_confirmed": false,
     "production_model_changed": false,
     "interpretation": "Retrospective selection repeatedly uses historical cohorts; no independent prospective evidence.",
-    "generated_at_jst": "2026-11-27T08:38:23+09:00",
+    "generated_at_jst": "2026-11-27T18:33:33+09:00",
     "replay_sha256": "25627015adbabf4520250a5e87a45fa355fd6b540e5114e017e0243bd09d751b"
   },
   "academic_discovery": {
     "version": "numbers3-academic-discovery-v1",
-    "generated_at_jst": "2026-11-27T08:38:31+09:00",
+    "generated_at_jst": "2026-11-27T18:33:48+09:00",
     "queries": 2,
     "sources_found": 10,
     "items": [
