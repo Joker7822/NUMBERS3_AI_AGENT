@@ -1,6 +1,6 @@
 {
   "product": "Numbers3",
-  "checked_at_jst": "2026-11-28T12:11:33+09:00",
+  "checked_at_jst": "2026-11-28T22:59:38+09:00",
   "status": "secondary_only_not_officially_verified",
   "bank_rows": 0,
   "rakuten_rows": 64,
@@ -12,17 +12,17 @@
     {
       "publisher": "bank",
       "month": "2026-11",
-      "reason": "not a Numbers3 Mizuho result page"
+      "reason": "publisher request unavailable: HTTPError"
     },
     {
       "publisher": "bank",
       "month": "2026-10",
-      "reason": "not a Numbers3 Mizuho result page"
+      "reason": "publisher request unavailable: HTTPError"
     },
     {
       "publisher": "bank",
       "month": "2026-09",
-      "reason": "not a Numbers3 Mizuho result page"
+      "reason": "publisher request unavailable: HTTPError"
     }
   ],
   "production_model_promoted": false,
